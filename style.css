@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f3f3;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    display: flex;
+}
+
+h1 {
+    text-align: center;
+    background-color: #ff4500;
+    color: #fff;
+    padding: 10px;
+}
+
+form {
+    text-align: center;
+    width: 400px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+label, input {
+    display: block;
+    margin: 15px auto; /* Mantenha esta regra para espaçamento vertical */
+}
+
+input {
+    font-size: 18px;
+    width: 300px;
+    border-radius: 8px;
+    height: 25px;
+    border: 1px solid #ff4500;
+    padding-left: 5%;
+    text-align: center;
+}
+
+button {
+    background-color: #ff4500;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 800;
+}
+
+button:hover {
+    background-color: #ff681c;
+}
+
+input::placeholder {
+    font-size: 15px;
+    font-weight: 500;
+    padding-right: 20px;
+}
+
+#productDescription {
+    width: 550px;
+    height: 450px;
+    overflow-y: auto;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Descrições</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./Assets/icone.png" type="image/x-icon">
+</head>
+<body>
+    <main>
+        <form id="productDescriptionForm">
+            <label for="productCode">Código do Produto:</label>
+            <input type="text" id="productCode" placeholder="Ex: BMW Série 7 1977 a 1986 22,21" required>
+            <button type="button" id="generateDescriptionButton">Gerar Descrição</button>
+        </form>
+        <div id="productDescription"></div>
+        
+    </main>
+    <script src="./scripts.js"></script>
+</body>
+</html>
