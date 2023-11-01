@@ -75,6 +75,18 @@ document.addEventListener("DOMContentLoaded", function() {
         document.body.removeChild(textArea);
     }
 
+    copyDescriptionButton.addEventListener("click", function() {
+        const descriptionText = productDescription.innerText;
+        copyToClipboard(descriptionText);
+    
+        productCodeInput.value = "";
+    
+        productDescription.innerHTML = "";
+    
+        showNotification("Copiada com sucesso!");
+    });
+    
+
     function showNotification(message) {
         const notification = document.getElementById("notification");
         notification.textContent = message;
@@ -86,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function() {
             setTimeout(function() {
                 notification.classList.add("hidden");
             }, 1000);
-        }, 3000); // O aviso desaparecerá após 3 segundos (ajuste conforme necessário)
+        }, 700);
     }
     
 });
