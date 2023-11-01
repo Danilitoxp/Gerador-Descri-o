@@ -59,7 +59,7 @@ button {
 }
 
 button:hover {
-    background-color: #ff5500;
+    background-color: #00d500;
 }
 
 input::placeholder {
