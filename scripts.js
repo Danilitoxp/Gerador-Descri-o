@@ -4,8 +4,12 @@ document.addEventListener("DOMContentLoaded", function() {
     const productCodeInput = document.getElementById("productCode");
     const productDescription = document.getElementById("productDescription");
 
+    function removeExcessSpaces(inputText) {
+        return inputText.replace(/\s+/g, ' ');
+    }
+
     generateDescriptionButton.addEventListener("click", function() {
-        const code = productCodeInput.value;
+        const code = removeExcessSpaces(productCodeInput.value);
         const description = generateProductDescription(code);
         productDescription.innerHTML = description;
     });
@@ -41,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function() {
             - Limpeza Silenciosa<br>
             - Adaptador Pré-Montado para Uma Fácil Instalação<br>
             - Resiste às Mais Diversas Condições Climáticas<br>
-            - Longa Vida Útil<br>
+            - Longa Vida<br>
             - Para Veículos com Braço Tipo Gancho<br>
             - Substitui a Palheta Convencional<br>
             - Instalação Rápida e Segura<br><br>
