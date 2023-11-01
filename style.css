@@ -9,6 +9,7 @@ body {
     background-color: #f3f3f3;
     margin: 0;
     padding: 0;
+    height: 100vh;
     background-color: var(--color-bg);
 }
 
@@ -19,6 +20,7 @@ main {
 form {
     text-align: center;
     width: 400px;
+    height: 230px;
     margin: 20px auto;
     background-color: #fff;
     padding: 20px;
@@ -52,9 +54,8 @@ button {
 }
 
 #copyButton {
-    position: absolute;
-    bottom: 40px;
-    right: 260px;
+    position: relative; /* Altere para relative */
+    margin-top: 20px; /* Adicione margem acima do botão para posicioná-lo abaixo do formulário */
     text-align: center;
 }
 

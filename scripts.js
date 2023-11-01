@@ -73,5 +73,7 @@ document.addEventListener("DOMContentLoaded", function() {
         textArea.select();
         document.execCommand("copy");
         document.body.removeChild(textArea);
+
+        alert("Descrição copiada com sucesso!");
     }
 });
