@@ -73,7 +73,20 @@ document.addEventListener("DOMContentLoaded", function() {
         textArea.select();
         document.execCommand("copy");
         document.body.removeChild(textArea);
-
-        alert("Descrição copiada com sucesso!");
     }
+
+    function showNotification(message) {
+        const notification = document.getElementById("notification");
+        notification.textContent = message;
+        notification.style.opacity = 1;
+        notification.classList.remove("hidden");
+    
+        setTimeout(function() {
+            notification.style.opacity = 0;
+            setTimeout(function() {
+                notification.classList.add("hidden");
+            }, 1000);
+        }, 3000); // O aviso desaparecerá após 3 segundos (ajuste conforme necessário)
+    }
+    
 });
