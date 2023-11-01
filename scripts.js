@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     const generateDescriptionButton = document.getElementById("generateDescriptionButton");
-    const copyDescriptionButton = document.getElementById("copyDescriptionButton"); // Adicionado botão de cópia
+    const copyDescriptionButton = document.getElementById("copyButton"); // Corrigido o ID
     const productCodeInput = document.getElementById("productCode");
     const productDescription = document.getElementById("productDescription");
 
