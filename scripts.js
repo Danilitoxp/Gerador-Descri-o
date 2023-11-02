@@ -12,11 +12,13 @@ document.addEventListener("DOMContentLoaded", function() {
         const code = removeExcessSpaces(productCodeInput.value);
         const description = generateProductDescription(code);
         productDescription.innerHTML = description;
+        document.querySelector(".copiar").style.display = "flex"
     });
 
     copyDescriptionButton.addEventListener("click", function() {
         const descriptionText = productDescription.innerText;
         copyToClipboard(descriptionText);
+        document.querySelector(".copiar").style.display = "none"
     });
 
     function generateProductDescription(code) {
@@ -24,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const title = parts.slice(0, parts.length - 4).join(" ");
         const yearRange = parts.slice(parts.length - 4, parts.length - 1).join(" ");
         const sizes = parts[parts.length - 1].split(",");
-    
+        
         const sizeDriver = sizes[0].trim();
         const sizePassenger = sizes[1].trim();
     
@@ -51,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function() {
             - Instalação Rápida e Segura<br><br>
             Importante:<br><br>
             Garantia de 30 Dias.`;
-    
+
         return description;
     }
 

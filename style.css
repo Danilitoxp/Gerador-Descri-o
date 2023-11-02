@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100%;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f3f3f3;
@@ -14,10 +18,10 @@ body {
 }
 
 form {
+    position: relative;
     text-align: center;
     width: 400px;
     height: 200px;
-    margin: 20px auto;
     background-color: #fff;
     padding: 20px;
     border-radius: 5px;
@@ -82,7 +86,7 @@ input::placeholder {
     width: 550px;
     height: 480px;
     overflow-y: auto;
-    margin: 20px auto;
+    margin: 0 auto;
     background-color: #fff;
     padding: 20px;
     border-radius: 5px;
@@ -90,9 +94,13 @@ input::placeholder {
 }
 
 #notification {
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
     text-align: center;
     max-width: 250px;
-    margin: 15px auto 0;
+    margin: 0 auto;
     background-color: rgba(0, 128, 0, 0.559);
     color: #fff;
     padding: 10px;
@@ -104,4 +112,19 @@ input::placeholder {
 
 .hidden {
     display: none;
+}
+
+main {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    gap: 30px;
+}
+
+.copiar {
+    display: none;
+    flex-direction: column;
+    gap: 30px;
 }

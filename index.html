@@ -13,11 +13,12 @@
             <label for="productCode">Código do Produto:</label>
             <input type="text" id="productCode" placeholder="Ex: BMW Série 7 1977 a 1986 22,21" required>
             <button type="button" id="generateDescriptionButton">Gerar Descrição</button>
+            <div id="notification" class="hidden">Copiada com sucesso!</div>
         </form>
-        <div id="productDescription"></div>
-        <button id="copyButton">Copiar Descrição</button>
-        
-        <div id="notification" class="hidden">Copiada com sucesso!</div>
+        <div class="copiar">
+            <div id="productDescription"></div>
+            <button id="copyButton">Copiar Descrição</button>
+        </div>
     </main>
     <script src="./scripts.js"></script>
 </body>
