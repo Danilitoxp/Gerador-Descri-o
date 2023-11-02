@@ -36,10 +36,10 @@ label, input {
 input {
     font-size: 18px;
     width: 300px;
-    padding: 15px 15px 15px 25px;
+    padding: 15px 15px 15px 15px;
     border-radius: 8px;
     height: 35px;
-    border: 1px solid green;
+    border: 1px solid #008000;
     text-align: center;
 }
 

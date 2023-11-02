@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function() {
             Valor do Par<br><br>
             Compatível com:<br><br>${compatibleYears}<br><br>
             Especificações Técnicas:<br><br>
-            - em Plástico Maleável<br>
+            - Em Plástico Maleável<br>
             - Sem Partes Metálicas Expostas<br>
             - Revestimento em Borracha que Reduz a Fricção com o Vidro<br>
             - Limpeza Silenciosa<br>
