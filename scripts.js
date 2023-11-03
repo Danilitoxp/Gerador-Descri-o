@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function() {
     
         productDescription.innerHTML = "";
     
-        showNotification("Copiada com sucesso!");
+        showNotification("Copiada com Sucesso!");
     });
     
 
