@@ -10,10 +10,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
     generateDescriptionButton.addEventListener("click", function() {
         const code = removeExcessSpaces(productCodeInput.value);
-        const description = generateProductDescription(code);
-        productDescription.innerHTML = description;
-        document.querySelector(".copiar").style.display = "flex"
+
+        if (code.trim() === "") {
+            showNotification("código Inválido!");
+        } else {
+            const description = generateProductDescription(code);
+            productDescription.innerHTML = description;
+            document.querySelector(".copiar").style.display = "flex";
+        }
     });
+    
 
     copyDescriptionButton.addEventListener("click", function() {
         const descriptionText = productDescription.innerText;
