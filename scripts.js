@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     const generateDescriptionButton = document.getElementById("generateDescriptionButton");
-    const copyDescriptionButton = document.getElementById("copyButton"); // Corrigido o ID
+    const copyDescriptionButton = document.getElementById("copyButton");
     const productCodeInput = document.getElementById("productCode");
     const productDescription = document.getElementById("productDescription");
 
@@ -12,19 +12,21 @@ document.addEventListener("DOMContentLoaded", function() {
         const code = removeExcessSpaces(productCodeInput.value);
 
         if (code.trim() === "") {
-            showNotification("código Inválido!");
+            showNotification("Código Inválido!");
         } else {
             const description = generateProductDescription(code);
             productDescription.innerHTML = description;
             document.querySelector(".copiar").style.display = "flex";
         }
     });
-    
 
     copyDescriptionButton.addEventListener("click", function() {
         const descriptionText = productDescription.innerText;
         copyToClipboard(descriptionText);
-        document.querySelector(".copiar").style.display = "none"
+        document.querySelector(".copiar").style.display = "none";
+        productCodeInput.value = "";
+        productDescription.innerHTML = "";
+        showNotification("Copiado com Sucesso!");
     });
 
     function generateProductDescription(code) {
@@ -32,10 +34,8 @@ document.addEventListener("DOMContentLoaded", function() {
         const title = parts.slice(0, parts.length - 4).join(" ");
         const yearRange = parts.slice(parts.length - 4, parts.length - 1).join(" ");
         const sizes = parts[parts.length - 1].split(",");
-        
         const sizeDriver = sizes[0].trim();
         const sizePassenger = sizes[1].trim();
-    
         const compatibleYears = generateCompatibleYears(title, yearRange);
 
         const description = `Par Palheta Limpador Para Brisa ${title} Silicone<br><br>
@@ -83,24 +83,12 @@ document.addEventListener("DOMContentLoaded", function() {
         document.body.removeChild(textArea);
     }
 
-    copyDescriptionButton.addEventListener("click", function() {
-        const descriptionText = productDescription.innerText;
-        copyToClipboard(descriptionText);
-    
-        productCodeInput.value = "";
-    
-        productDescription.innerHTML = "";
-    
-        showNotification("Copiada com Sucesso!");
-    });
-    
-
     function showNotification(message) {
         const notification = document.getElementById("notification");
         notification.textContent = message;
         notification.style.opacity = 1;
         notification.classList.remove("hidden");
-    
+
         setTimeout(function() {
             notification.style.opacity = 0;
             setTimeout(function() {
@@ -108,5 +96,4 @@ document.addEventListener("DOMContentLoaded", function() {
             }, 1000);
         }, 700);
     }
-    
 });
