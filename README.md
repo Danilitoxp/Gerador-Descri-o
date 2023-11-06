@@ -12,7 +12,7 @@
 
 ## 💻 Projeto
 
-Meu projeto pessoal é uma incrível ferramenta que desenvolvi usando tecnologias web como HTML, CSS e JavaScript. Com esta criação, você pode gerar descrições completas a partir de códigos abreviados, aprimorando significativamente seu desempenho e velocidade na criação de anúncios.
+Meu projeto pessoal é uma ferramenta que desenvolvi usando tecnologias web como HTML, CSS e JavaScript. Com esta criação, você pode gerar descrições completas a partir de códigos abreviados, aprimorando significativamente seu desempenho e velocidade na criação de anúncios.
 
 - [Acesse o projeto](https://gerador-descricao.vercel.app/)
 
